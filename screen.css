@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+/* start reset */
+
+html, body, div, p, h1, h2, h3, h4, h5, h6,
+ul, ol, li, dl, dt, dd, form, fieldset, caption, legend,
+table, tr, td, th, address, blockquote, img {
+    margin: 0;
+    padding: 0;
+}
+
+img, fieldset {
+    border: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+button, label, summary {
+    cursor: pointer;
+}
+
+body, button, input, table, textarea, select {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* end reset */
+
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #edf2f8;
+    font: normal 0.8125em/1.5 'Barlow Semi Condensed', sans-serif;
+    min-height: 100%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+    margin: 5em 1.5em;
+}
+
+article section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.75em 2.5em;
+    box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+    color: hsl(217, 19%, 35%);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: .8125em;
+}
+
+header h2 {
+    font-size: 1em;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+header h2 + small {
+    font-size: .875em;
+    opacity: 50%;
+    display: block;
+}
+
+header img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin-right: 1.25em;
+}
+
+.card-primary header img {
+    border: .125em solid #996ed9;
+}
+
+.card-alternate header img {
+    border: .125em solid #654D99;
+}
+
+section > strong {
+    display: block;
+    font: 600 1.5em 'Barlow Semi Condensed', sans-serif;
+    margin: 0 0 .875em;
+}
+
+section > q {
+    display: block;
+    font: 500 1em/1.375 'Barlow Semi Condensed', sans-serif;
+    opacity: 70%;
+    quotes: initial;
+}
+
+.card-1 {
+    background: hsl(263, 55%, 52%) url(images/bg-pattern-quotation.svg) no-repeat top 0 right 6vw;
+    color: hsl(210, 46%, 95%);
+}
+
+.card-2 {
+    background: hsl(217, 19%, 35%);
+    color: hsl(210, 46%, 95%);
+}
+
+.card-4 {
+    background: hsl(219, 29%, 14%);
+    color: hsl(210, 46%, 95%);
+}
+
+footer {
+    color: var(--moderate-violet);
+    opacity: 0.4;
+    gap: 0.25rem;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 1rem;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--moderate-violet);
+    opacity: 0.7;
+}
+
+@media (min-width: 48em) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article {
+        max-width: 71rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25vw;
+        margin-left: 1.25vw;
+        margin-right: 1.25vw;
+    }
+
+    article section {
+        padding: 1.75em 1.98vw;
+    }
+
+    .card-1 {
+        grid-column: 1 / span 2;
+    }
+
+    .card-3 {
+        grid-row: 2;
+    }
+
+    .card-4 {
+        grid-row: 2;
+        grid-column: 2 / span 2;
+    }
+
+    .card-5 {
+        grid-row: 1 / span 2;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.625rem;
+        grid-column: 1 / span 4;
+        margin: 0;
+    }
+}
