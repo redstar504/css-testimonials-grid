@@ -110,14 +110,6 @@ header img {
     margin-right: 1.25em;
 }
 
-.card-primary header img {
-    border: .125em solid #996ed9;
-}
-
-.card-alternate header img {
-    border: .125em solid #654D99;
-}
-
 section > strong {
     display: block;
     font: 600 1.5em 'Barlow Semi Condensed', sans-serif;
@@ -134,6 +126,14 @@ section > q {
 .card-1 {
     background: hsl(263, 55%, 52%) url(images/bg-pattern-quotation.svg) no-repeat top 0 right 6vw;
     color: hsl(210, 46%, 95%);
+}
+
+.card-1 header img {
+    border: .2em solid #996ed9;
+}
+
+.card-4 header img {
+    border: .2em solid #654D99;
 }
 
 .card-2 {
